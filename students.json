@@ -1,0 +1,63 @@
+[
+    {
+        "name": "Aman",
+        "age": 25,
+        "github": {
+            "repos": "",
+            "followers": ""
+        }
+    },
+    {
+        "name": "",
+        "age": 34,
+        "github": "Not found"
+    },
+    {
+        "name": "Khushboo",
+        "age": 50,
+        "github": {
+            "repos": 0,
+            "followers": 0
+        }
+    },
+    {
+        "name": "Dharm",
+        "age": 25,
+        "github": null
+    },
+    {
+        "name": "Dharm",
+        "age": 25,
+        "github_username": "fsefsjnvisovosn",
+        "github": null
+    },
+    {
+        "name": "Dharm",
+        "age": 25,
+        "github": null
+    },
+    {
+        "name": "anki",
+        "age": 23,
+        "github": {
+            "repos": 9,
+            "followers": 0
+        }
+    },
+    {
+        "name": "ank",
+        "age": 23,
+        "github": {
+            "repos": 9,
+            "followers": 0
+        }
+    },
+    {
+        "name": "an",
+        "age": 23,
+        "github": {
+            "repos": 9,
+            "followers": 0
+        }
+    }
+]
