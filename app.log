@@ -68,3 +68,272 @@
 2026-05-03 02:55:57,528 - ERROR - Exception occurred 404 Client Error: Not Found for url: http://localhost:11434/api/generate
 2026-05-03 03:07:29,714 - ERROR - Exception occurred 404 Client Error: Not Found for url: http://localhost:11434/api/generate
 2026-05-03 03:08:56,360 - ERROR - Exception occurred 404 Client Error: Not Found for url: http://localhost:11434/api/generate
+2026-05-04 02:48:02,198 - INFO - inside chat
+2026-05-04 02:48:22,695 - INFO - --------Context---- 
+- 
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- 
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+2026-05-04 02:48:22,695 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- 
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- 
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who has more GitHub repos?
+    
+2026-05-04 03:11:02,947 - INFO - --------Context---- 
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+2026-05-04 03:11:02,947 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who has more GitHub repos?
+    
+2026-05-04 22:08:15,711 - INFO - --------Context---- 
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. They dont have Github profile
+
+2026-05-04 22:08:15,737 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. They dont have Github profile
+
+        
+        Question:
+        Who has Github?
+    
+2026-05-04 22:13:06,136 - INFO - --------Context---- 
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+2026-05-04 22:13:06,137 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. They have 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. They have 9 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who all have Github?
+    
+2026-05-04 22:16:59,410 - INFO - --------Context---- 
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. He/She does not have Github profile
+
+2026-05-04 22:16:59,410 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. He/She does not have Github profile
+
+        
+        Question:
+        Who has Github?
+    
+2026-05-04 22:20:58,396 - INFO - --------Context---- 
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. He/She does not have Github profile
+
+2026-05-04 22:20:58,396 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- Aman is 25 years old. He/She does not have Github profile
+
+        
+        Question:
+        Who has Github?
+    
+2026-05-04 22:23:08,765 - INFO - --------Context---- 
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+2026-05-04 22:23:08,766 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who has Github
+    
+2026-05-04 22:26:03,166 - INFO - --------Context---- 
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+2026-05-04 22:26:03,167 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who has Github
+    
+2026-05-04 22:28:56,213 - INFO - --------Context---- 
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+2026-05-04 22:28:56,213 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who has Github
+    
+2026-05-04 22:30:58,127 - INFO - --------Context---- 
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+2026-05-04 22:30:58,127 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who all have Github?
+    
+2026-05-04 22:32:41,037 - INFO - --------Context---- 
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+2026-05-04 22:32:41,037 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who all have Github?
+    
+2026-05-04 22:34:27,381 - INFO - --------Context---- 
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+2026-05-04 22:34:27,381 - INFO - -------Prompt------ 
+        You are an assistant that answers ONLY using the provided student data.
+        
+        Rules:
+        - Do NOT make up information
+        - If answer is not in data, say "I don't know"
+        
+        Data:
+        
+- Khushboo is 50 years old. He/She has 0 repos and 0 followers on GitHub.
+
+- an is 23 years old. He/She has 9 repos and 0 followers on GitHub.
+
+        
+        Question:
+        Who all have Github?
+    

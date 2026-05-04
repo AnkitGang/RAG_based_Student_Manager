@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from file_handler import load_students, save_students
 from llm_service import ask_llm
+from rag_service import build_index, retrieve_relevant_info
 from pydantic import BaseModel
 import requests
 import logging
@@ -46,34 +47,19 @@ def fetch_github_profile(username: str):
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    students = load_students()
+    index = build_index()
 
-    if not students:
+    if not index:
         return {
             "response": "No Student data available"
         }
 
+    relevant = retrieve_relevant_info(req.message, index)
+
     context = ""
-    for s in students:
-        if not s['name']:
-            continue
 
-        if not s['age']:
-            s['age'] = 0
-
-        github = s.get('github')
-
-        context += f"\n- {s['name']} is {s['age']} years old. "
-
-        if github and isinstance(github, dict):
-            repos = github.get('repos', 'N/A')
-            followers = github.get('followers', 'N/A')
-            if repos is not None and repos != "" and followers is not None and followers != "":
-                context += f"They have {repos} repos and {followers} followers on GitHub.\n"
-            else:
-                context += "They dont have Github profile"
-        else:
-            context += "They dont have Github profile"
+    for item in relevant:
+        context += "\n- " + item["text"]
 
     prompt = f"""
         You are an assistant that answers ONLY using the provided student data.
@@ -89,8 +75,8 @@ def chat(req: ChatRequest):
         {req.message}
     """
 
-    logger.info("--------Context----", context)
-    logger.info("-------Prompt------", prompt)
+    logger.info(f"--------Context---- {context}")
+    logger.info(f"-------Prompt------ {prompt}")
 
     response = ask_llm(prompt)
     return {

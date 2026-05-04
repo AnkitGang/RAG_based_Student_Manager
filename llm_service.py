@@ -10,7 +10,7 @@ def ask_llm(prompt: str) -> str:
         res = requests.post(
             OLLAMA_URL,
             json={
-                "model": "phi3",
+                "model": "llama3",
                 "prompt": prompt,
                 "stream": False
             }
