@@ -7,7 +7,7 @@
 
 2. Run the project and start server
     # Inside Project folder ->
-    - uvicorn Controller:app --reload
+    - uvicorn src.RAG_based_Student_Manager.controllers.Controller:app --reload
 
 3. Access FastAPI
     - http://127.0.0.1:8000/docs#/

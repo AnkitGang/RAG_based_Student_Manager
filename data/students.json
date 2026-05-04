@@ -1,16 +1,8 @@
 [
     {
-        "name": "Aman",
-        "age": 25,
-        "github": {
-            "repos": "",
-            "followers": ""
-        }
-    },
-    {
         "name": "",
         "age": 34,
-        "github": "Not found"
+        "github": null
     },
     {
         "name": "Khushboo",

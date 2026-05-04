@@ -1,8 +1,11 @@
 import json
 import logging
+import os
 
-# FILE_NAME = "CLI_Student_Manager.txt"
-FILE_NAME = "../../../data/students.json"
+# Get the directory of the current script
+script_dir = os.path.dirname(os.path.abspath(__file__))
+# Build path to students.json relative to the project structure
+FILE_NAME = os.path.join(script_dir, "..", "..", "..", "data", "students.json")
 logger = logging.getLogger(__name__)
 
 

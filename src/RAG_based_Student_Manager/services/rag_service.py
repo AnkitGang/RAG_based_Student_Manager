@@ -75,11 +75,11 @@ def student_to_text(student):
         repos = github.get("repos", "")
         followers = github.get("followers", "")
         if repos is not None and repos != "" and followers is not None and followers != "":
-            text += f"He/She has {repos} repos and {followers} followers on GitHub.\n"
+            text += f"They has {repos} repos and {followers} followers on GitHub."
         else:
-            text += "He/She does not have Github profile\n"
+            text += "They does not have Github profile"
     else:
-        text += "He/She does not have Github profile\n"
+        text += "They does not have Github profile"
 
     return text
 
