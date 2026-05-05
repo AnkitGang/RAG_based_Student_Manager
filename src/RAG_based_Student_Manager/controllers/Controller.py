@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
+
 from src.RAG_based_Student_Manager.utils.file_handler import load_students, save_students
 from src.RAG_based_Student_Manager.services.llm_service import ask_llm
-from src.RAG_based_Student_Manager.utils.vector_store import build_vector_store, query_vector_store
+from src.RAG_based_Student_Manager.services.langchain_service import chain, vector_store, load_into_chroma
+
 from pydantic import BaseModel
+
 import requests
 import logging
 import os
@@ -34,40 +37,16 @@ class ChatRequest(BaseModel):
     message: str
 
 
-@app.on_event(event_type="startup")
+@app.on_event("startup")
 def startup_event():
-    build_vector_store()
+    students = load_students()
+    load_into_chroma(students)
 
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    relevant_doc = query_vector_store(req.message)
+    response = chain.invoke(req.message)
 
-    if not relevant_doc:
-        return {
-            "response": "No Student data available"
-        }
-
-    context = "\n".join([f"- {doc.strip()}" for doc in relevant_doc if doc])
-
-    prompt = f"""
-You are an assistant that answers ONLY using the provided student data.
-
-Rules:
-- Do NOT make up information
-- If answer is not in data, say "I don't know"
-
-Data:
-{context}
-
-Question:
-{req.message}
-    """
-
-    logger.info(f"--------Context---- {context}")
-    logger.info(f"-------Prompt------ {prompt}")
-
-    response = ask_llm(prompt)
     return {
         "response": response
     }
@@ -93,7 +72,7 @@ def add_student(student: Student):
     students.append(new_student)
     save_students(students)
 
-    build_vector_store()
+    load_into_chroma([new_student])
 
     return {
         "message": "Student added successfully",
@@ -144,7 +123,7 @@ def delete_student(name: str):
 
     save_students(new_students)
 
-    build_vector_store()
+    load_into_chroma(new_students)
 
     return {
         "message": "Deleted successfully"

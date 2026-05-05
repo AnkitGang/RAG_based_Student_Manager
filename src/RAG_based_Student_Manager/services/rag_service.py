@@ -61,19 +61,16 @@ def cosine_similarity(a, b):
 
 
 def student_to_text(student):
-    if not student["name"]:
-        return None
-
-    if not student["age"]:
-        return None
+    name = student.get("name", "Unknown")
+    age = student.get("age", "Unknown")
 
     github = student.get("github")
 
-    text = f"{student['name']} is {student['age']} years old. "
+    text = f"{name} is {age} years old. "
 
     if github and isinstance(github, dict):
-        repos = github.get("repos", "")
-        followers = github.get("followers", "")
+        repos = github.get("repos")
+        followers = github.get("followers")
         if repos is not None and repos != "" and followers is not None and followers != "":
             text += f"They has {repos} repos and {followers} followers on GitHub."
         else:
