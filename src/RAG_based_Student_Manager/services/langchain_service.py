@@ -46,6 +46,10 @@ retriever = vector_store.as_retriever(
 )
 
 
+# ---------- IN-MEMORY CHAT HISTORY ----------
+chat_history = []
+
+
 # ---------- PROMPT ----------
 prompt = PromptTemplate.from_template(
 """
@@ -54,6 +58,9 @@ You are an assistant that answers ONLY using the provided student data.
 Rules:
 - Do NOT make up information
 - If answer is not in data, say "I don't know"
+
+Chat History:
+{history}
 
 Data:
 {context}
@@ -75,15 +82,20 @@ def format_docs(docs):
 
 
 # ---------- CHAIN ----------
-chain = (
-    {
-        "context": retriever | format_docs,
-        "question": RunnablePassthrough()
-    }
-    | prompt
-    | llm
-    | StrOutputParser()
-)
+def build_chain():
+    return (
+        {
+            "context": retriever | format_docs,
+            "question": RunnablePassthrough(),
+            "history": lambda _: "\n".join(chat_history)
+        }
+        | prompt
+        | llm
+        | StrOutputParser()
+    )
+
+
+chain = build_chain()
 
 
 # ---------- LOAD DATA INTO CHROMA ----------

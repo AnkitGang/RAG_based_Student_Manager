@@ -1,8 +1,7 @@
 from fastapi import FastAPI, HTTPException
 
 from src.RAG_based_Student_Manager.utils.file_handler import load_students, save_students
-from src.RAG_based_Student_Manager.services.llm_service import ask_llm
-from src.RAG_based_Student_Manager.services.langchain_service import chain, vector_store, load_into_chroma
+from src.RAG_based_Student_Manager.services.langchain_service import chain, chat_history, load_into_chroma
 
 from pydantic import BaseModel
 
@@ -46,6 +45,9 @@ def startup_event():
 @app.post("/chat")
 def chat(req: ChatRequest):
     response = chain.invoke(req.message)
+
+    chat_history.append(f"User: {req.message}")
+    chat_history.append(f"AI: {response}")
 
     return {
         "response": response
